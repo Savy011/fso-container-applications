@@ -11,13 +11,22 @@ router.get('/', async (_, res) => {
 
 /* POST todo to listing. */
 router.post('/', async (req, res) => {
-  const todo = await Todo.create({
+  const currentCount = parseInt(await getAsync('todoCount'));
+	let updatedCount;
+
+	if (isNaN(currentCount)) {
+		updatedCount = 1;
+	} else {
+		updatedCount = currentCount + 1;
+	}
+	
+	const todo = await Todo.create({
     text: req.body.text,
     done: false
   })
 	
-  await setAsync('todoCount', await getAsync('todoCount') + 1);
-	
+	await setAsync('todoCount', updatedCount);
+
   res.send(todo);
 });
 
