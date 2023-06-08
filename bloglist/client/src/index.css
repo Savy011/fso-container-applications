@@ -1,0 +1,57 @@
+:root {
+    --jasmine: #ffd076;
+    --tiffany-blue: #97e0cf;
+    --lilac: #c4afd0;
+    --medium-slate-blue: #8a4fffff;
+    --dark-purple: #422040ff;
+}
+
+.app-container {
+    padding-top: 64px;
+}
+
+html {
+    font-family: 'Baskervville';
+    background-image: linear-gradient(
+        to bottom right,
+        var(--lilac) 25%,
+        var(--jasmine) 66%,
+        var(--tiffany-blue) 100%
+    );
+    min-height: 100vh;
+}
+
+.blog {
+    background: #fffa;
+    border: black 2px solid;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    margin-bottom: 5px;
+}
+
+.MuiOutlinedInput-input {
+    padding: 3rem;
+    margin: 3rem;
+}
+
+.success {
+    font-size: 1.5rem;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: green;
+    background-color: lightgray;
+    border: green solid 2px;
+    border-radius: 10px;
+}
+
+.error {
+    font-size: 1.5rem;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: red;
+    background-color: lightgray;
+    border: red solid 2px;
+    border-radius: 10px;
+}

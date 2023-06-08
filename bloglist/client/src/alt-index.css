@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap');
+
+body {
+    color: white;
+    font-family: 'JetBrains Mono', monospace;
+    background-image: linear-gradient(
+        to right bottom,
+        #c4afd0,
+        #deacca,
+        #f4aaba,
+        #ffaca1,
+        #ffb588,
+        #f8c07d,
+        #eacc77,
+        #d7d878,
+        #bcde8e,
+        #a7e1a6,
+        #9ae1bc,
+        #97e0cf
+    );
+    background-attachment: fixed;
+}
+
+input {
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+input:active {
+    border: none;
+}
+
+.blog {
+    color: black;
+    background: #fffa;
+    border: black 2px solid;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    margin-bottom: 5px;
+}
+
+form {
+    color: black;
+    background-color: rgba(211, 211, 211, 0.8);
+    box-sizing: border-box;
+    width: fit-content;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: #000a 0px 3px 6px 3px;
+}
+
+button {
+    background-color: #000a;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 7px 10px 7px 10px;
+    box-shadow: #000a 0px 3px 6px 0px;
+}
+
+.success {
+    font-size: 1.5rem;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: green;
+    background-color: lightgray;
+    border: green solid 2px;
+    border-radius: 10px;
+}
+
+.error {
+    font-size: 1.5rem;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: red;
+    background-color: lightgray;
+    border: red solid 2px;
+    border-radius: 10px;
+}
