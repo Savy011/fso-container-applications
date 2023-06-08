@@ -1,13 +1,27 @@
-FROM node:18 as build-stage
+FROM node:18 AS test-stage
 
 WORKDIR /usr/src/app
 
 COPY . .
-RUN npm ci --only-production
+
+RUN npm install
+
+RUN CI=true npm run test
+
+RUN rm -rf ./node_modules
+
+FROM node:18 AS build-stage
+
+WORKDIR /usr/src/app
+
+COPY --from=test-stage /usr/src/app .
+
+RUN npm install
 
 ENV REACT_APP_BACKEND_URL=http://localhost:3000
+
 RUN npm run build
 
-FROM nginx
+FROM nginx:1.20-alpine
 
-COPY --from=build-stage /usr/src//app/build /usr/share/nginx/html
+COPY --from=build-stage /usr/src/app/build /usr/share/nginx/html
